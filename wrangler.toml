@@ -1,0 +1,16 @@
+# Configuração para Cloudflare Pages
+name = "glions-website"
+compatibility_date = "2024-01-01"
+
+[build]
+command = "npm run build"
+cwd = "."
+
+# Configuração correta para Pages
+pages_build_output_dir = "dist"
+
+[env.production]
+NODE_ENV = "production"
+
+[env.preview]
+NODE_ENV = "development"
