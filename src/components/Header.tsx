@@ -37,29 +37,29 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-10 animate-fade-in-up animate-delay-200">
-            <a href="#inicio" className="text-white/90 hover:text-white transition-all duration-300 font-medium text-lg relative group">
+            <a href="#inicio" className="text-white/90 hover:text-[#DAA520] transition-all duration-300 font-medium text-lg relative group">
               Início
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DAA520] transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#servicos" className="text-white/90 hover:text-white transition-all duration-300 font-medium text-lg relative group">
+            <a href="#servicos" className="text-white/90 hover:text-[#DAA520] transition-all duration-300 font-medium text-lg relative group">
               Serviços
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DAA520] transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#tipos-consorcio" className="text-white/90 hover:text-white transition-all duration-300 font-medium text-lg relative group">
+            <a href="#tipos-consorcio" className="text-white/90 hover:text-[#DAA520] transition-all duration-300 font-medium text-lg relative group">
               Modalidades
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DAA520] transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#como-funciona" className="text-white/90 hover:text-white transition-all duration-300 font-medium text-lg relative group">
+            <a href="#como-funciona" className="text-white/90 hover:text-[#DAA520] transition-all duration-300 font-medium text-lg relative group">
               Como Funciona
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DAA520] transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#depoimentos" className="text-white/90 hover:text-white transition-all duration-300 font-medium text-lg relative group">
+            <a href="#depoimentos" className="text-white/90 hover:text-[#DAA520] transition-all duration-300 font-medium text-lg relative group">
               Depoimentos
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DAA520] transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#contato" className="text-white/90 hover:text-white transition-all duration-300 font-medium text-lg relative group">
+            <a href="#contato" className="text-white/90 hover:text-[#DAA520] transition-all duration-300 font-medium text-lg relative group">
               Contato
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DAA520] transition-all duration-300 group-hover:w-full"></span>
             </a>
           </nav>
 
@@ -67,7 +67,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-4 animate-fade-in-right animate-delay-300">
             <button 
               onClick={openWhatsApp}
-              className="btn-primary bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center space-x-2"
+              className="btn-primary bg-[#DAA520] hover:bg-[#B8941C] text-white px-8 py-3 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center space-x-2"
             >
               <span>Simular Agora</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -100,14 +100,14 @@ const Header = () => {
               <a 
                 key={item}
                 href={`#${item.toLowerCase().replace(' ', '-').replace('modalidades', 'tipos-consorcio')}`} 
-                className={`block text-white/90 hover:text-white transition-all duration-300 font-medium text-lg py-2 hover:translate-x-2 animate-fade-in-left animate-delay-${(index + 1) * 100}`}
+                className={`block text-white/90 hover:text-[#DAA520] transition-all duration-300 font-medium text-lg py-2 hover:translate-x-2 animate-fade-in-left animate-delay-${(index + 1) * 100}`}
               >
                 {item}
               </a>
             ))}
             <button 
               onClick={openWhatsApp}
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white px-6 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2 animate-fade-in-up animate-delay-600"
+              className="w-full bg-[#DAA520] hover:bg-[#B8941C] text-white px-6 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2 animate-fade-in-up animate-delay-600"
             >
               <span>Simular Agora</span>
               <ArrowRight size={20} />

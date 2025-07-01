@@ -72,8 +72,8 @@ const Footer = () => {
             {/* Social Media */}
             <div className="flex space-x-4">
               {[Facebook, Instagram, Linkedin, Youtube].map((Icon, index) => (
-                <a key={index} href="#" className={`w-12 h-12 bg-blue-800 rounded-xl flex items-center justify-center hover:bg-blue-700 hover:scale-105 transition-all duration-300`}>
-                  <Icon size={24} />
+                <a key={index} href="#" className={`w-12 h-12 bg-[#DAA520]/20 border border-[#DAA520]/30 rounded-xl flex items-center justify-center hover:bg-[#DAA520] hover:scale-105 transition-all duration-300`}>
+                  <Icon size={24} className="text-[#DAA520] hover:text-white transition-colors duration-300" />
                 </a>
               ))}
             </div>
@@ -85,7 +85,7 @@ const Footer = () => {
             <ul className="space-y-4">
               {services.map((service, index) => (
                 <li key={index}>
-                  <a href="#" className={`text-blue-200 hover:text-white transition-all duration-300 text-lg hover:translate-x-1 inline-block animate-fade-in-left animate-delay-${(index + 1) * 100}`}>
+                  <a href="#" className={`text-blue-200 hover:text-[#DAA520] transition-all duration-300 text-lg hover:translate-x-1 inline-block animate-fade-in-left animate-delay-${(index + 1) * 100}`}>
                     {service}
                   </a>
                 </li>
@@ -99,7 +99,7 @@ const Footer = () => {
             <ul className="space-y-4">
               {links.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className={`text-blue-200 hover:text-white transition-all duration-300 text-lg hover:translate-x-1 inline-block animate-fade-in-left animate-delay-${(index + 1) * 100}`}>
+                  <a href="#" className={`text-blue-200 hover:text-[#DAA520] transition-all duration-300 text-lg hover:translate-x-1 inline-block animate-fade-in-left animate-delay-${(index + 1) * 100}`}>
                     {link}
                   </a>
                 </li>
@@ -112,22 +112,22 @@ const Footer = () => {
             <h3 className="text-xl lg:text-2xl font-bold mb-8">Contato</h3>
             <div className="space-y-6">
               <div className="flex items-center space-x-4 hover-lift">
-                <div className="w-10 h-10 bg-blue-800 rounded-lg flex items-center justify-center">
-                  <Phone size={20} className="text-blue-300" />
+                <div className="w-10 h-10 bg-[#DAA520]/20 border border-[#DAA520]/30 rounded-lg flex items-center justify-center">
+                  <Phone size={20} className="text-[#DAA520]" />
                 </div>
-                <span className="text-blue-200 text-lg hover:text-white transition-colors duration-300">(11) 96531-6163</span>
+                <span className="text-blue-200 text-lg hover:text-[#DAA520] transition-colors duration-300">(11) 96531-6163</span>
               </div>
               <div className="flex items-center space-x-4 hover-lift">
-                <div className="w-10 h-10 bg-blue-800 rounded-lg flex items-center justify-center">
-                  <Mail size={20} className="text-blue-300" />
+                <div className="w-10 h-10 bg-[#DAA520]/20 border border-[#DAA520]/30 rounded-lg flex items-center justify-center">
+                  <Mail size={20} className="text-[#DAA520]" />
                 </div>
-                <span className="text-blue-200 text-lg hover:text-white transition-colors duration-300">contato@glions.com.br</span>
+                <span className="text-blue-200 text-lg hover:text-[#DAA520] transition-colors duration-300">contato@glions.com.br</span>
               </div>
               <div className="flex items-start space-x-4 hover-lift">
-                <div className="w-10 h-10 bg-blue-800 rounded-lg flex items-center justify-center mt-1">
-                  <MapPin size={20} className="text-blue-300" />
+                <div className="w-10 h-10 bg-[#DAA520]/20 border border-[#DAA520]/30 rounded-lg flex items-center justify-center mt-1">
+                  <MapPin size={20} className="text-[#DAA520]" />
                 </div>
-                <span className="text-blue-200 text-lg hover:text-white transition-colors duration-300">
+                <span className="text-blue-200 text-lg hover:text-[#DAA520] transition-colors duration-300">
                   R. Topázio, 76 - Vila Mariana<br />
                   São Paulo - SP<br />
                   CEP: 04105-060
@@ -136,7 +136,7 @@ const Footer = () => {
             </div>
 
             {/* Business Hours */}
-            <div className="mt-8 p-6 bg-blue-900 rounded-2xl hover-lift">
+            <div className="mt-8 p-6 bg-[#DAA520]/10 border border-[#DAA520]/20 rounded-2xl hover-lift">
               <h4 className="font-bold mb-3 text-lg">Horário de Atendimento</h4>
               <p className="text-blue-200">
                 Segunda a Sexta: 8h às 18h<br />
@@ -148,12 +148,12 @@ const Footer = () => {
       </div>
 
       {/* Legal Footer */}
-      <div className="border-t border-blue-800">
+      <div className="border-t border-[#DAA520]/20">
         <div className="container mx-auto px-4 lg:px-6 py-8">
           <div className={`flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0 ${isVisible ? 'animate-fade-in-up animate-delay-600' : 'opacity-0'}`}>
             <div className="flex flex-wrap gap-6 lg:gap-8">
               {legal.map((item, index) => (
-                <a key={index} href="#" className="text-blue-300 hover:text-white transition-all duration-300 hover:underline hover:scale-105">
+                <a key={index} href="#" className="text-blue-300 hover:text-[#DAA520] transition-all duration-300 hover:underline hover:scale-105">
                   {item}
                 </a>
               ))}
@@ -170,7 +170,7 @@ const Footer = () => {
       <div className="fixed bottom-6 right-6 z-50 no-print">
         <button 
           onClick={openWhatsApp}
-          className="bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-full font-semibold shadow-2xl flex items-center space-x-3 transition-all duration-300 hover:scale-105"
+          className="bg-[#DAA520] hover:bg-[#B8941C] text-white px-6 py-4 rounded-full font-semibold shadow-2xl flex items-center space-x-3 transition-all duration-300 hover:scale-105"
         >
           <Phone size={24} />
           <span className="hidden sm:inline">WhatsApp</span>

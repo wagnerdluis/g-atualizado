@@ -66,12 +66,12 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="depoimentos" className="py-16 lg:py-24 bg-gray-50 particles">
+    <section id="depoimentos" className="py-16 lg:py-24 bg-[#E5E5EA]/30 particles">
       <div className="container mx-auto px-4 lg:px-6">
         {/* Header */}
         <div className={`text-center mb-12 lg:mb-16 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <div className="inline-flex items-center space-x-2 bg-yellow-50 text-yellow-700 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 hover-lift">
-            <Star className="text-yellow-500" size={14} />
+          <div className="inline-flex items-center space-x-2 bg-[#DAA520]/10 text-[#DAA520] px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 hover-lift border border-[#DAA520]/20">
+            <Star className="text-[#DAA520]" size={14} />
             <span>Histórias Reais</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
@@ -86,7 +86,7 @@ const Testimonials = () => {
         {/* Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 lg:mb-16">
           {stats.map((stat, index) => (
-            <div key={index} className={`text-center bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift ${isVisible ? `animate-fade-in-up animate-delay-${(index + 1) * 100}` : 'opacity-0'}`}>
+            <div key={index} className={`text-center bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift border border-[#E5E5EA] ${isVisible ? `animate-fade-in-up animate-delay-${(index + 1) * 100}` : 'opacity-0'}`}>
               <div className="text-xl sm:text-2xl lg:text-3xl mb-2">{stat.icon}</div>
               <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#010133] mb-1 sm:mb-2">
                 {stat.number}
@@ -103,18 +103,18 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className={`bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 relative group hover-lift ${isVisible ? `animate-fade-in-up animate-delay-${(index + 5) * 200}` : 'opacity-0'}`}
+              className={`bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 relative group hover-lift border border-[#E5E5EA] ${isVisible ? `animate-fade-in-up animate-delay-${(index + 5) * 200}` : 'opacity-0'}`}
             >
               <div className="relative z-10">
                 {/* Quote Icon */}
-                <div className="absolute top-4 right-4 sm:top-6 sm:right-6 text-gray-200 group-hover:text-gray-300 transition-all duration-300">
+                <div className="absolute top-4 right-4 sm:top-6 sm:right-6 text-[#E5E5EA] group-hover:text-[#DAA520]/30 transition-all duration-300">
                   <Quote size={32} />
                 </div>
 
                 {/* Rating */}
                 <div className="flex items-center space-x-1 mb-4 sm:mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="text-yellow-400 fill-current" size={18} />
+                    <Star key={i} className="text-[#DAA520] fill-current" size={18} />
                   ))}
                 </div>
 
@@ -125,13 +125,13 @@ const Testimonials = () => {
 
                 {/* Achievement Badges */}
                 <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
-                  <div className="bg-green-100 text-green-800 px-3 py-1 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-semibold inline-block hover-lift animate-fade-in-left">
+                  <div className="bg-[#DAA520]/10 text-[#DAA520] px-3 py-1 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-semibold inline-block hover-lift animate-fade-in-left border border-[#DAA520]/20">
                     ✓ {testimonial.achievement}
                   </div>
-                  <div className="bg-blue-100 text-blue-800 px-3 py-1 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-semibold inline-block ml-2 hover-lift animate-fade-in-left animate-delay-100">
+                  <div className="bg-[#010133]/10 text-[#010133] px-3 py-1 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-semibold inline-block ml-2 hover-lift animate-fade-in-left animate-delay-100 border border-[#010133]/20">
                     💰 {testimonial.value}
                   </div>
-                  <div className="bg-orange-100 text-orange-800 px-3 py-1 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-semibold inline-block hover-lift animate-fade-in-left animate-delay-200">
+                  <div className="bg-[#DAA520]/10 text-[#DAA520] px-3 py-1 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-semibold inline-block hover-lift animate-fade-in-left animate-delay-200 border border-[#DAA520]/20">
                     ⏱️ Em {testimonial.time}
                   </div>
                 </div>
@@ -141,7 +141,7 @@ const Testimonials = () => {
                   <img 
                     src={testimonial.photo}
                     alt={testimonial.name}
-                    className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-full object-cover border-4 border-gray-100 group-hover:border-[#010133] transition-all duration-300 hover:scale-105"
+                    className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-full object-cover border-4 border-[#E5E5EA] group-hover:border-[#010133] transition-all duration-300 hover:scale-105"
                   />
                   <div>
                     <div className="font-bold text-gray-900 text-sm sm:text-base lg:text-lg group-hover:text-[#010133] transition-colors duration-300">
@@ -162,7 +162,7 @@ const Testimonials = () => {
 
         {/* Trust Section */}
         <div className={`text-center ${isVisible ? 'animate-fade-in-up animate-delay-800' : 'opacity-0'}`}>
-          <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl hover-lift">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl hover-lift border border-[#E5E5EA]">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
               Empresa Regulamentada e Confiável
             </h3>
@@ -177,8 +177,8 @@ const Testimonials = () => {
                 { text: 'Associado FEBRABAN', delay: '0.4s' }
               ].map((item, index) => (
                 <div key={index} className="flex items-center space-x-2 sm:space-x-3 text-gray-600 font-semibold text-sm sm:text-base lg:text-lg hover-lift animate-fade-in-up" style={{ animationDelay: item.delay }}>
-                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <span className="text-green-600 text-xs sm:text-sm">✓</span>
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#DAA520]/10 border border-[#DAA520]/20 rounded-full flex items-center justify-center">
+                    <span className="text-[#DAA520] text-xs sm:text-sm">✓</span>
                   </div>
                   <span className="hover:text-[#010133] transition-colors duration-300">{item.text}</span>
                 </div>

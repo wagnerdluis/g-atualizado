@@ -100,28 +100,28 @@ Data: ${new Date().toLocaleString('pt-BR')}
       title: 'Ligue Agora',
       content: '(11) 96531-6163',
       subContent: 'Atendimento humanizado',
-      color: 'blue'
+      color: '[#010133]'
     },
     {
       icon: Mail,
       title: 'E-mail',
       content: 'contato@glions.com.br',
       subContent: 'Resposta garantida em 2h',
-      color: 'blue'
+      color: '[#010133]'
     },
     {
       icon: MapPin,
       title: 'Visite-nos',
       content: 'R. Topázio, 76 - Vila Mariana',
       subContent: 'São Paulo - SP, 04105-060',
-      color: 'blue'
+      color: '[#010133]'
     },
     {
       icon: Clock,
       title: 'Horário',
       content: 'Seg-Sex: 8h às 18h',
       subContent: 'Sáb: 8h às 12h',
-      color: 'blue'
+      color: '[#010133]'
     }
   ];
 
@@ -130,7 +130,7 @@ Data: ${new Date().toLocaleString('pt-BR')}
       <div className="container mx-auto px-4 lg:px-6">
         {/* Header */}
         <div className={`text-center mb-12 lg:mb-16 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <div className="inline-flex items-center space-x-2 bg-orange-50 text-orange-700 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 hover-lift">
+          <div className="inline-flex items-center space-x-2 bg-[#DAA520]/10 text-[#DAA520] px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 hover-lift border border-[#DAA520]/20">
             <MessageSquare size={14} />
             <span>Fale Conosco</span>
           </div>
@@ -145,7 +145,7 @@ Data: ${new Date().toLocaleString('pt-BR')}
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Form */}
-          <div className={`bg-gray-50 rounded-3xl p-6 sm:p-8 lg:p-10 hover-lift ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
+          <div className={`bg-[#E5E5EA]/30 rounded-3xl p-6 sm:p-8 lg:p-10 hover-lift border border-[#E5E5EA] ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
             <div className="flex items-center space-x-3 mb-6 sm:mb-8">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#010133] rounded-xl flex items-center justify-center">
                 <User className="text-white" size={20} />
@@ -180,12 +180,12 @@ Data: ${new Date().toLocaleString('pt-BR')}
             </div>
 
             {isSubmitted ? (
-              <div className="bg-green-100 border border-green-200 rounded-2xl p-6 sm:p-8 text-center animate-scale-in">
-                <CheckCircle className="text-green-600 mx-auto mb-4 sm:mb-6" size={48} />
-                <h4 className="text-xl sm:text-2xl font-bold text-green-800 mb-3 sm:mb-4">
+              <div className="bg-[#DAA520]/10 border border-[#DAA520]/20 rounded-2xl p-6 sm:p-8 text-center animate-scale-in">
+                <CheckCircle className="text-[#DAA520] mx-auto mb-4 sm:mb-6" size={48} />
+                <h4 className="text-xl sm:text-2xl font-bold text-[#DAA520] mb-3 sm:mb-4">
                   Simulação Enviada!
                 </h4>
-                <p className="text-green-700 text-sm sm:text-base lg:text-lg">
+                <p className="text-[#DAA520]/80 text-sm sm:text-base lg:text-lg">
                   Seu cliente de e-mail foi aberto com suas informações. Complete o envio para que 
                   um de nossos consultores entre em contato com sua simulação personalizada.
                 </p>
@@ -203,7 +203,7 @@ Data: ${new Date().toLocaleString('pt-BR')}
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-3 sm:px-4 py-3 sm:py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#010133] focus:border-transparent transition-all text-sm sm:text-base hover:border-[#010133] focus-ring"
+                      className="w-full px-3 sm:px-4 py-3 sm:py-4 border border-[#E5E5EA] rounded-xl focus:ring-2 focus:ring-[#010133] focus:border-transparent transition-all text-sm sm:text-base hover:border-[#010133] focus-ring"
                       placeholder="Seu nome completo"
                     />
                   </div>
@@ -217,7 +217,7 @@ Data: ${new Date().toLocaleString('pt-BR')}
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-3 sm:px-4 py-3 sm:py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#010133] focus:border-transparent transition-all text-sm sm:text-base hover:border-[#010133] focus-ring"
+                      className="w-full px-3 sm:px-4 py-3 sm:py-4 border border-[#E5E5EA] rounded-xl focus:ring-2 focus:ring-[#010133] focus:border-transparent transition-all text-sm sm:text-base hover:border-[#010133] focus-ring"
                       placeholder="(11) 99999-9999"
                     />
                   </div>
@@ -233,7 +233,7 @@ Data: ${new Date().toLocaleString('pt-BR')}
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-3 sm:px-4 py-3 sm:py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#010133] focus:border-transparent transition-all text-sm sm:text-base hover:border-[#010133] focus-ring"
+                    className="w-full px-3 sm:px-4 py-3 sm:py-4 border border-[#E5E5EA] rounded-xl focus:ring-2 focus:ring-[#010133] focus:border-transparent transition-all text-sm sm:text-base hover:border-[#010133] focus-ring"
                     placeholder="seu@email.com"
                   />
                 </div>
@@ -248,7 +248,7 @@ Data: ${new Date().toLocaleString('pt-BR')}
                       required
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-3 sm:px-4 py-3 sm:py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#010133] focus:border-transparent transition-all text-sm sm:text-base hover:border-[#010133] focus-ring"
+                      className="w-full px-3 sm:px-4 py-3 sm:py-4 border border-[#E5E5EA] rounded-xl focus:ring-2 focus:ring-[#010133] focus:border-transparent transition-all text-sm sm:text-base hover:border-[#010133] focus-ring"
                     >
                       <option value="">Selecione uma opção</option>
                       <option value="aluguel">Pago aluguel e quero sair</option>
@@ -266,7 +266,7 @@ Data: ${new Date().toLocaleString('pt-BR')}
                       name="value"
                       value={formData.value}
                       onChange={handleChange}
-                      className="w-full px-3 sm:px-4 py-3 sm:py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#010133] focus:border-transparent transition-all text-sm sm:text-base hover:border-[#010133] focus-ring"
+                      className="w-full px-3 sm:px-4 py-3 sm:py-4 border border-[#E5E5EA] rounded-xl focus:ring-2 focus:ring-[#010133] focus:border-transparent transition-all text-sm sm:text-base hover:border-[#010133] focus-ring"
                       placeholder="R$ 300.000"
                     />
                   </div>
@@ -281,7 +281,7 @@ Data: ${new Date().toLocaleString('pt-BR')}
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-3 sm:px-4 py-3 sm:py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#010133] focus:border-transparent transition-all text-sm sm:text-base resize-none hover:border-[#010133] focus-ring"
+                    className="w-full px-3 sm:px-4 py-3 sm:py-4 border border-[#E5E5EA] rounded-xl focus:ring-2 focus:ring-[#010133] focus:border-transparent transition-all text-sm sm:text-base resize-none hover:border-[#010133] focus-ring"
                     placeholder="Ex: Quero uma casa de 3 quartos na zona sul, tenho FGTS disponível..."
                   />
                 </div>
@@ -289,7 +289,7 @@ Data: ${new Date().toLocaleString('pt-BR')}
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full btn-primary bg-[#010133] hover:bg-blue-900 disabled:bg-gray-400 text-white py-4 sm:py-5 rounded-xl font-semibold text-base sm:text-lg flex items-center justify-center space-x-3 transition-all duration-300 disabled:hover:scale-100 animate-fade-in-up animate-delay-700"
+                  className="w-full btn-primary bg-[#010133] hover:bg-[#000829] disabled:bg-gray-400 text-white py-4 sm:py-5 rounded-xl font-semibold text-base sm:text-lg flex items-center justify-center space-x-3 transition-all duration-300 disabled:hover:scale-100 animate-fade-in-up animate-delay-700"
                 >
                   <Send size={20} className={isSubmitting ? 'animate-spin' : ''} />
                   <span>
@@ -314,9 +314,9 @@ Data: ${new Date().toLocaleString('pt-BR')}
                 {contactInfo.map((info, index) => {
                   const Icon = info.icon;
                   return (
-                    <div key={index} className={`flex items-start space-x-3 sm:space-x-4 p-4 sm:p-6 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-all duration-300 hover-lift animate-fade-in-up animate-delay-${(index + 1) * 100}`}>
-                      <div className={`w-12 h-12 sm:w-14 sm:h-14 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0`}>
-                        <Icon className="text-blue-600" size={20} />
+                    <div key={index} className={`flex items-start space-x-3 sm:space-x-4 p-4 sm:p-6 bg-[#E5E5EA]/30 rounded-2xl hover:bg-white transition-all duration-300 hover-lift animate-fade-in-up animate-delay-${(index + 1) * 100} border border-[#E5E5EA]`}>
+                      <div className={`w-12 h-12 sm:w-14 sm:h-14 bg-${info.color}/10 border border-${info.color}/20 rounded-xl flex items-center justify-center flex-shrink-0`}>
+                        <Icon className={`text-${info.color}`} size={20} />
                       </div>
                       <div>
                         <h4 className="font-bold text-gray-900 mb-1 sm:mb-2 text-base sm:text-lg hover:text-[#010133] transition-colors duration-300">
@@ -336,10 +336,10 @@ Data: ${new Date().toLocaleString('pt-BR')}
             </div>
 
             {/* Endereço com Link */}
-            <div className="bg-gray-50 rounded-3xl p-6 sm:p-8 hover-lift animate-fade-in-up animate-delay-500">
+            <div className="bg-[#E5E5EA]/30 rounded-3xl p-6 sm:p-8 hover-lift animate-fade-in-up animate-delay-500 border border-[#E5E5EA]">
               <div className="flex items-center space-x-3 mb-4 sm:mb-6">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                  <MapPin className="text-blue-600" size={20} />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#010133]/10 border border-[#010133]/20 rounded-xl flex items-center justify-center">
+                  <MapPin className="text-[#010133]" size={20} />
                 </div>
                 <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
                   Nosso Escritório
@@ -353,7 +353,7 @@ Data: ${new Date().toLocaleString('pt-BR')}
                 href="https://maps.app.goo.gl/Mnq9885YS3VKXrxQ9"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 bg-[#010133] hover:bg-blue-900 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base"
+                className="inline-flex items-center space-x-2 bg-[#010133] hover:bg-[#000829] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base"
               >
                 <MapPin size={18} />
                 <span>Ver Localização</span>
@@ -369,7 +369,7 @@ Data: ${new Date().toLocaleString('pt-BR')}
                 Nossa equipe está pronta para te atender e esclarecer todas as suas dúvidas sobre consórcios e financiamentos.
               </p>
               <div className="flex items-center space-x-3 mb-4">
-                <Phone className="text-orange-400" size={20} />
+                <Phone className="text-[#DAA520]" size={20} />
                 <span className="font-bold text-white text-lg sm:text-xl">
                   (11) 96531-6163
                 </span>
