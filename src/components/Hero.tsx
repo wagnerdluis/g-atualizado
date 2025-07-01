@@ -62,8 +62,8 @@ const Hero = () => {
           <div className={`space-y-4 lg:space-y-6 text-center lg:text-left ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
             {/* Badge - Centralizado no mobile */}
             <div className="flex justify-center lg:justify-start">
-              <div className="inline-flex items-center space-x-2 bg-orange-50 text-orange-700 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold hover-lift">
-                <Star className="text-orange-500" size={14} />
+              <div className="inline-flex items-center space-x-2 bg-[#DAA520]/10 text-[#DAA520] px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold hover-lift border border-[#DAA520]/20">
+                <Star className="text-[#DAA520]" size={14} />
                 <span>Mais de 300 famílias contempladas</span>
               </div>
             </div>
@@ -82,15 +82,15 @@ const Hero = () => {
             {/* Trust Indicators - Ocultos no mobile */}
             <div className={`hidden lg:flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 justify-center lg:justify-start ${isVisible ? 'animate-fade-in-up animate-delay-400' : 'opacity-0'}`}>
               {[
-                { icon: Shield, title: 'Sem Juros', subtitle: 'Pague só o valor do bem', color: 'green' },
-                { icon: Clock, title: 'Parcelas Fixas', subtitle: 'Sem surpresas no orçamento', color: 'blue' },
-                { icon: Users, title: '3 Anos', subtitle: 'De experiência', color: 'purple' }
+                { icon: Shield, title: 'Sem Juros', subtitle: 'Pague só o valor do bem', color: '[#DAA520]' },
+                { icon: Clock, title: 'Parcelas Fixas', subtitle: 'Sem surpresas no orçamento', color: '[#010133]' },
+                { icon: Users, title: '3 Anos', subtitle: 'De experiência', color: '[#DAA520]' }
               ].map((item, index) => {
                 const Icon = item.icon;
                 return (
                   <div key={index} className={`flex items-center space-x-2 sm:space-x-3 hover-lift animate-delay-${(index + 1) * 100} justify-center sm:justify-start`}>
-                    <div className={`w-8 h-8 sm:w-10 sm:h-10 bg-${item.color}-100 rounded-lg flex items-center justify-center flex-shrink-0`}>
-                      <Icon className={`text-${item.color}-600`} size={16} />
+                    <div className={`w-8 h-8 sm:w-10 sm:h-10 bg-${item.color}/10 border border-${item.color}/20 rounded-lg flex items-center justify-center flex-shrink-0`}>
+                      <Icon className={`text-${item.color}`} size={16} />
                     </div>
                     <div className="text-left">
                       <div className="font-semibold text-gray-900 text-sm">{item.title}</div>
@@ -105,7 +105,7 @@ const Hero = () => {
             <div className={`flex justify-center lg:justify-start ${isVisible ? 'animate-fade-in-up animate-delay-500' : 'opacity-0'}`}>
               <button 
                 onClick={openWhatsApp}
-                className="btn-primary bg-[#010133] hover:bg-blue-900 text-white px-6 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base lg:text-lg flex items-center justify-center space-x-2 transition-all duration-300"
+                className="btn-primary bg-[#010133] hover:bg-[#000829] text-white px-6 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base lg:text-lg flex items-center justify-center space-x-2 transition-all duration-300"
               >
                 <span>Quero Minha Simulação</span>
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -113,7 +113,7 @@ const Hero = () => {
             </div>
 
             {/* Stats */}
-            <div className={`grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 pt-4 border-t border-gray-200 ${isVisible ? 'animate-fade-in-up animate-delay-600' : 'opacity-0'}`}>
+            <div className={`grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 pt-4 border-t border-[#E5E5EA] ${isVisible ? 'animate-fade-in-up animate-delay-600' : 'opacity-0'}`}>
               {[
                 { value: 'R$ 100M+', label: 'Em Créditos' },
                 { value: '300+', label: 'Contemplados' },
@@ -137,10 +137,10 @@ const Hero = () => {
               />
               
               {/* Floating Card */}
-              <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 lg:-bottom-6 lg:-left-6 bg-white p-3 sm:p-4 lg:p-6 rounded-2xl shadow-2xl border border-gray-100 hover-lift">
+              <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 lg:-bottom-6 lg:-left-6 bg-white p-3 sm:p-4 lg:p-6 rounded-2xl shadow-2xl border border-[#E5E5EA] hover-lift">
                 <div className="text-xs text-gray-600 mb-1">Parcelas a partir de</div>
                 <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#010133] mb-1">R$ 350/mês</div>
-                <div className="text-xs text-green-600 font-semibold">✓ Sem juros</div>
+                <div className="text-xs text-[#DAA520] font-semibold">✓ Sem juros</div>
               </div>
 
               {/* Video Play Button */}
@@ -154,15 +154,15 @@ const Hero = () => {
               </div>
 
               {/* Video Badge */}
-              <div className="absolute top-3 left-3 bg-red-600 text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center space-x-1">
+              <div className="absolute top-3 left-3 bg-[#DAA520] text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center space-x-1">
                 <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
                 <span>DEPOIMENTO REAL</span>
               </div>
             </div>
 
             {/* Background Decoration */}
-            <div className="absolute -top-4 -right-4 w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 bg-orange-100 rounded-full opacity-20 -z-10"></div>
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 bg-blue-100 rounded-full opacity-20 -z-10"></div>
+            <div className="absolute -top-4 -right-4 w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 bg-[#DAA520]/20 rounded-full opacity-20 -z-10"></div>
+            <div className="absolute -bottom-6 -right-6 w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 bg-[#010133]/20 rounded-full opacity-20 -z-10"></div>
           </div>
         </div>
       </div>

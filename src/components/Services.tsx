@@ -43,7 +43,7 @@ const Services = () => {
       description: 'A forma mais inteligente de conquistar sua casa própria. Sem juros, com parcelas fixas e total flexibilidade.',
       features: ['Sem juros bancários', 'Parcelas que não aumentam', 'Use seu FGTS', 'Contemplação garantida'],
       highlight: 'Sem Juros',
-      color: 'blue',
+      color: '[#010133]',
       benefit: 'Economia de até 40% comparado ao financiamento'
     },
     {
@@ -52,7 +52,7 @@ const Services = () => {
       description: 'Para quem tem pressa e quer sair do aluguel agora. Aprovação rápida e condições especiais.',
       features: ['Aprovação em 48h', 'Use FGTS como entrada', 'Até 35 anos para pagar', 'Taxas competitivas'],
       highlight: 'Aprovação Rápida',
-      color: 'green',
+      color: '[#DAA520]',
       benefit: 'Saia do aluguel em até 60 dias'
     },
     {
@@ -61,7 +61,7 @@ const Services = () => {
       description: 'Descubra qual a melhor opção para seu perfil. Compare consórcio vs financiamento sem compromisso.',
       features: ['100% gratuita', 'Resultado na hora', 'Sem compromisso', 'Orientação especializada'],
       highlight: 'Gratuito',
-      color: 'orange',
+      color: '[#DAA520]',
       benefit: 'Tome a decisão certa para seu futuro'
     }
   ];
@@ -88,11 +88,11 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="py-16 lg:py-24 bg-gray-50 particles">
+    <section id="servicos" className="py-16 lg:py-24 bg-[#E5E5EA]/30 particles">
       <div className="container mx-auto px-4 lg:px-6">
         {/* Header */}
         <div className={`text-center mb-12 lg:mb-16 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <div className="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 hover-lift">
+          <div className="inline-flex items-center space-x-2 bg-[#010133]/10 text-[#010133] px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 hover-lift border border-[#010133]/20">
             <span>Nossas Soluções</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
@@ -111,16 +111,16 @@ const Services = () => {
             return (
               <div 
                 key={index}
-                className={`bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 group relative overflow-hidden hover-lift ${isVisible ? `animate-fade-in-up animate-delay-${(index + 1) * 200}` : 'opacity-0'}`}
+                className={`bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 group relative overflow-hidden hover-lift border border-[#E5E5EA] ${isVisible ? `animate-fade-in-up animate-delay-${(index + 1) * 200}` : 'opacity-0'}`}
               >
                 {/* Highlight Badge */}
-                <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-orange-500 text-white px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
+                <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-[#DAA520] text-white px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
                   {service.highlight}
                 </div>
 
                 <div className="relative z-10">
-                  <div className={`w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-${service.color}-100 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-105 transition-all duration-300`}>
-                    <Icon className={`text-${service.color}-600`} size={32} />
+                  <div className={`w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 bg-${service.color}/10 border border-${service.color}/20 rounded-2xl flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-105 transition-all duration-300`}>
+                    <Icon className={`text-${service.color}`} size={32} />
                   </div>
                   
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 group-hover:text-[#010133] transition-colors duration-300">
@@ -132,8 +132,8 @@ const Services = () => {
                   </p>
 
                   {/* Benefit Highlight */}
-                  <div className="bg-green-50 border border-green-200 rounded-xl p-3 sm:p-4 mb-6 sm:mb-8 hover-lift">
-                    <p className="text-green-800 font-semibold text-center text-xs sm:text-sm">
+                  <div className="bg-[#DAA520]/10 border border-[#DAA520]/20 rounded-xl p-3 sm:p-4 mb-6 sm:mb-8 hover-lift">
+                    <p className="text-[#DAA520] font-semibold text-center text-xs sm:text-sm">
                       💡 {service.benefit}
                     </p>
                   </div>
@@ -141,7 +141,7 @@ const Services = () => {
                   <ul className="space-y-3 sm:space-y-4 mb-8 sm:mb-10">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className={`flex items-center space-x-2 sm:space-x-3 animate-fade-in-left animate-delay-${(idx + 1) * 100}`}>
-                        <CheckCircle className={`text-${service.color}-500`} size={16} />
+                        <CheckCircle className={`text-${service.color}`} size={16} />
                         <span className="text-gray-700 font-medium text-sm sm:text-base">{feature}</span>
                       </li>
                     ))}
@@ -149,7 +149,7 @@ const Services = () => {
                   
                   <button 
                     onClick={openWhatsApp}
-                    className="w-full btn-primary bg-[#010133] hover:bg-blue-900 text-white py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                    className="w-full btn-primary bg-[#010133] hover:bg-[#000829] text-white py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 flex items-center justify-center space-x-2"
                   >
                     <span>Simular Agora</span>
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -161,7 +161,7 @@ const Services = () => {
         </div>
 
         {/* Benefits */}
-        <div className={`bg-white rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl hover-lift ${isVisible ? 'animate-fade-in-up animate-delay-600' : 'opacity-0'}`}>
+        <div className={`bg-white rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl hover-lift border border-[#E5E5EA] ${isVisible ? 'animate-fade-in-up animate-delay-600' : 'opacity-0'}`}>
           <div className="text-center mb-8 lg:mb-12">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
               Por que a G.LIONS é diferente?
@@ -179,7 +179,7 @@ const Services = () => {
                   <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-[#010133] rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-105 transition-all duration-300">
                     <Icon className="text-white" size={32} />
                   </div>
-                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-orange-500 mb-2">{benefit.stats}</div>
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#DAA520] mb-2">{benefit.stats}</div>
                   <h4 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-3 sm:mb-4 group-hover:text-[#010133] transition-colors duration-300">
                     {benefit.title}
                   </h4>
@@ -195,7 +195,7 @@ const Services = () => {
           <div className="text-center">
             <button 
               onClick={scrollToContact}
-              className="btn-primary bg-[#010133] hover:bg-blue-900 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 flex items-center space-x-2 mx-auto"
+              className="btn-primary bg-[#010133] hover:bg-[#000829] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 flex items-center space-x-2 mx-auto"
             >
               <span>Saiba Mais</span>
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />

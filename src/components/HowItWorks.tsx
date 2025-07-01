@@ -72,7 +72,7 @@ const HowItWorks = () => {
       <div className="container mx-auto px-4 lg:px-6">
         {/* Header */}
         <div className={`text-center mb-12 lg:mb-16 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <div className="inline-flex items-center space-x-2 bg-green-50 text-green-700 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 hover-lift">
+          <div className="inline-flex items-center space-x-2 bg-[#DAA520]/10 text-[#DAA520] px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 hover-lift border border-[#DAA520]/20">
             <span>Processo Simples</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
@@ -87,7 +87,7 @@ const HowItWorks = () => {
         {/* Steps */}
         <div className="relative mb-16 lg:mb-20">
           {/* Progress Line - Desktop */}
-          <div className="hidden lg:block absolute top-32 left-0 right-0 h-1 bg-gray-200 overflow-hidden">
+          <div className="hidden lg:block absolute top-32 left-0 right-0 h-1 bg-[#E5E5EA] overflow-hidden">
             <div className={`h-1 bg-[#010133] transition-all duration-2000 ${isVisible ? 'w-full' : 'w-0'}`}></div>
           </div>
 
@@ -98,20 +98,20 @@ const HowItWorks = () => {
                 <div key={index} className="relative">
                   {/* Mobile Arrow */}
                   {index < steps.length - 1 && (
-                    <div className={`lg:hidden absolute -bottom-3 left-1/2 transform -translate-x-1/2 text-gray-300 transition-all duration-500 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: `${(index + 1) * 200}ms` }}>
+                    <div className={`lg:hidden absolute -bottom-3 left-1/2 transform -translate-x-1/2 text-[#E5E5EA] transition-all duration-500 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: `${(index + 1) * 200}ms` }}>
                       <ArrowRight size={20} className="rotate-90" />
                     </div>
                   )}
 
                   {/* Step Card */}
-                  <div className={`bg-white border-2 border-gray-100 rounded-3xl p-6 lg:p-8 text-center hover:border-[#010133] hover:shadow-2xl transition-all duration-500 group hover-lift ${isVisible ? `animate-fade-in-up animate-delay-${(index + 1) * 200}` : 'opacity-0'}`}>
+                  <div className={`bg-white border-2 border-[#E5E5EA] rounded-3xl p-6 lg:p-8 text-center hover:border-[#010133] hover:shadow-2xl transition-all duration-500 group hover-lift ${isVisible ? `animate-fade-in-up animate-delay-${(index + 1) * 200}` : 'opacity-0'}`}>
                     <div className="relative z-10">
                       {/* Step Number & Icon */}
                       <div className="relative mb-6 sm:mb-8">
                         <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-[#010133] rounded-2xl flex items-center justify-center mx-auto relative z-10 group-hover:scale-105 transition-all duration-300">
                           <Icon className="text-white" size={24} />
                         </div>
-                        <div className="absolute -top-2 -right-2 w-8 h-8 sm:w-10 sm:h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
+                        <div className="absolute -top-2 -right-2 w-8 h-8 sm:w-10 sm:h-10 bg-[#DAA520] rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
                           {step.number}
                         </div>
                       </div>
@@ -127,7 +127,7 @@ const HowItWorks = () => {
                       <ul className="space-y-2 sm:space-y-3">
                         {step.details.map((detail, idx) => (
                           <li key={idx} className={`flex items-center justify-center space-x-2 animate-fade-in-left animate-delay-${(idx + 1) * 100}`}>
-                            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full"></div>
+                            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#DAA520] rounded-full"></div>
                             <span className="text-gray-700 font-medium text-xs sm:text-sm">{detail}</span>
                           </li>
                         ))}
@@ -154,7 +154,7 @@ const HowItWorks = () => {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 justify-center">
                 <button 
                   onClick={openWhatsApp}
-                  className="btn-primary bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 flex items-center justify-center space-x-2 animate-fade-in-up animate-delay-300"
+                  className="btn-primary bg-[#DAA520] hover:bg-[#B8941C] text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 flex items-center justify-center space-x-2 animate-fade-in-up animate-delay-300"
                 >
                   <span>Quero Parar de Pagar Aluguel</span>
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />

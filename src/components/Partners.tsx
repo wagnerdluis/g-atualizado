@@ -59,11 +59,11 @@ const Partners = () => {
   const duplicatedPartners = [...partners, ...partners, ...partners];
 
   return (
-    <section id="parceiros" className="py-12 lg:py-16 bg-white border-t border-gray-100 particles">
+    <section id="parceiros" className="py-12 lg:py-16 bg-white border-t border-[#E5E5EA] particles">
       <div className="container mx-auto px-4 lg:px-6">
         {/* Header */}
         <div className={`text-center mb-8 lg:mb-12 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-          <div className="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 hover-lift">
+          <div className="inline-flex items-center space-x-2 bg-[#010133]/10 text-[#010133] px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 hover-lift border border-[#010133]/20">
             <Handshake size={14} />
             <span>Nossos Parceiros</span>
           </div>
@@ -125,7 +125,7 @@ const Partners = () => {
               }
             ].map((item, index) => (
               <div key={index} className={`text-center group hover-lift animate-fade-in-up`} style={{ animationDelay: item.delay }}>
-                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-105 transition-all duration-300">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-[#010133]/10 border border-[#010133]/20 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-105 transition-all duration-300">
                   <span className="text-lg sm:text-xl lg:text-2xl">{item.icon}</span>
                 </div>
                 <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 group-hover:text-[#010133] transition-colors duration-300">
